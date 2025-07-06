@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join as Doctor – Global Telehealth</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="background-image">
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">🌍 Global Telehealth</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="join-doctor.html" class="active">Join as Doctor</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-section">
+    <div class="container">
+      <h1>Become a Certified Telehealth Provider</h1>
+      <p>Join thousands of licensed doctors helping patients globally via our platform.</p>
+
+      <form action="#" method="POST" enctype="multipart/form-data" class="form-box">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone (include country code)</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="specialty">Specialization</label>
+        <select id="specialty" name="specialty" required>
+          <option value="">-- Select --</option>
+          <option>Cardiologist</option>
+          <option>Dentist</option>
+          <option>Dermatologist</option>
+          <option>Psychologist</option>
+          <option>Pediatrician</option>
+          <option>Neurologist</option>
+          <option>General Practitioner</option>
+        </select>
+
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">-- Select Country --</option>
+          <option>USA 🇺🇸</option>
+          <option>Kenya 🇰🇪</option>
+          <option>India 🇮🇳</option>
+          <option>UK 🇬🇧</option>
+          <option>Germany 🇩🇪</option>
+          <option>South Korea 🇰🇷</option>
+          <option>Canada 🇨🇦</option>
+          <option>Brazil 🇧🇷</option>
+        </select>
+
+        <label for="experience">Years of Experience</label>
+        <input type="number" id="experience" name="experience" min="1" max="60" required>
+
+        <label for="certs">Upload Certification (PDF/JPG)</label>
+        <input type="file" id="certs" name="certs" accept=".pdf,.jpg,.jpeg,.png" required>
+
+        <label>
+          <input type="checkbox" name="terms" required>
+          I confirm I am a licensed medical professional and agree to the <a href="#">Terms & Privacy Policy</a>.
+        </label>
+
+        <button type="submit" class="btn-primary">Submit Application</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Global Telehealth. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,430 @@
+/* ========== General Reset & Base Styles ========== */
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+   background-image: url('../images/background.jpg');
+}
+
+/* Background for pages */
+body.background-image {
+  background-image: url('../images/background.png'); /* Replace with your actual background image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: rgba(0, 0, 50, 0.8);
+  color: #fff;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: #00bfff;
+  border-radius: 4px;
+}
+
+/* Main Form Section */
+.form-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-section p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+/* Form Styles */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box label {
+  font-weight: bold;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="tel"],
+.form-box input[type="number"],
+.form-box input[type="file"],
+.form-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.form-box input[type="file"] {
+  padding: 5px;
+}
+
+.form-box input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.form-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-box a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #00bfff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #009acd;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 50, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: url('../images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #1d1d1d;
+  min-height: 100vh;
+}
+
+/* ========== Navigation ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(11, 57, 84, 0.95);
+  padding: 15px 30px;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo span {
+  color: #00c3ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links .btn-secondary {
+  background: #00c3ff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* ========== Sections ========== */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+/* ========== Headings ========== */
+h1, h2, h3 {
+  color: #0b3954;
+  margin-bottom: 20px;
+}
+
+/* ========== Buttons ========== */
+button, .btn, .actions a {
+  background: #0b3954;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover, .btn:hover, .actions a:hover {
+  background: #1076a8;
+  transform: scale(1.03);
+}
+
+/* ========== Form Styles ========== */
+form {
+  background: #ffffffcc;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+form input[type="submit"] {
+  background-color: #00c3ff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0893c1;
+}
+
+/* ========== Image Formatting ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ccc;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ========== Grid Layouts ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ========== Cards ========== */
+.card {
+  background: #ffffffdd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ========== Profile Page ========== */
+.doctor-profile {
+  background: #ffffffcc;
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-menu {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.profile-menu a {
+  padding: 10px 15px;
+  background: #00c3ff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.profile-menu a:hover {
+  background: #0893c1;
+}
+
+.profile-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+/* ========== Join Doctor Page ========== */
+.form-section {
+  background-color: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-box {
+  margin-bottom: 20px;
+}
+
+.form-box label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-box input, .form-box select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f8f8;
+}
+
+.form-box button {
+  background: #0b3954;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.form-box button:hover {
+  background: #1076a8;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-profile {
+    padding: 20px;
+  }
+
+  .profile-menu {
+    flex-direction: column;
+  }
+}

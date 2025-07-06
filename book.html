@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Appointment – TeleHealth Global</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Stripe JS (card payments) -->
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">TeleHealth<span>Global</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="contact.html">Support</a></li>
+      <li><a href="login.html" class="btn-secondary">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1>Book Your Appointment</h1>
+
+  <!-- Booking Form -->
+  <form id="bookingForm">
+    <label>Choose Doctor</label>
+    <select required>
+      <option value="">Select…</option>
+      <option value="dr-smith">Dr Aisha Smith – Cardiologist (USA)</option>
+      <option value="dr-patel">Dr Rakesh Patel – Dermatologist (India)</option>
+      <option value="dr-wangari">Dr Grace Wangari – Psychologist (Kenya)</option>
+    </select>
+
+    <label>Date</label>
+    <input type="date" required>
+
+    <label>Time (UTC)</label>
+    <input type="time" required>
+
+    <!-- Payment Method Tabs -->
+    <h2>Payment Method</h2>
+
+    <input type="radio" id="pay-card" name="pay" value="card" checked>
+    <label for="pay-card">Debit / Credit Card (Stripe)</label><br>
+
+    <input type="radio" id="pay-mpesa" name="pay" value="mpesa">
+    <label for="pay-mpesa">M-Pesa (STK Push)</label><br>
+
+    <input type="radio" id="pay-bank" name="pay" value="bank">
+    <label for="pay-bank">Bank / eCitizen</label>
+
+    <!-- Stripe Card Element -->
+    <div id="card-section">
+      <p>Card details:</p>
+      <div id="card-element" style="padding:12px;border:1px solid #ccc;border-radius:6px;"></div>
+    </div>
+
+    <!-- M-Pesa phone input -->
+    <div id="mpesa-section" style="display:none;">
+      <p>Enter Safaricom number for STK Push:</p>
+      <input type="tel" id="mpesa-phone" placeholder="+2547…" pattern="\\+?[0-9]{10,14}">
+    </div>
+
+    <!-- Bank/eCitizen instructions -->
+    <div id="bank-section" style="display:none;">
+      <p>We’ll show bank reference or eCitizen pay-bill after you click “Confirm”.</p>
+    </div>
+
+    <button type="submit" class="btn-primary">Confirm & Pay</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 TeleHealth Global. All rights reserved.</p>
+</footer>
+
+<!-- Demo Script (switch payment sections + dummy Stripe) -->
+<script>
+const radioBtns = document.querySelectorAll('[name=pay]');
+const cardSec  = document.getElementById('card-section');
+const mpesaSec = document.getElementById('mpesa-section');
+const bankSec  = document.getElementById('bank-section');
+
+radioBtns.forEach(btn=>{
+  btn.addEventListener('change', () => {
+    cardSec.style.display  = btn.value==='card'  ? 'block':'none';
+    mpesaSec.style.display = btn.value==='mpesa' ? 'block':'none';
+    bankSec.style.display  = btn.value==='bank'  ? 'block':'none';
+  });
+});
+
+/* Stripe test – replace with live key/server endpoint */
+const stripe = Stripe('pk_test_YOUR_PUBLIC_KEY');
+const elements = stripe.elements();
+elements.create('card').mount('#card-element');
+</script>
+</body>
+</html>
